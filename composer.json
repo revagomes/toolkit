@@ -21,8 +21,7 @@
         "drush/drush": "^9.7.1 || ^10.0.0 || ^11.0.4",
         "ec-europa/qa-automation": "^8.1.5",
         "guzzlehttp/guzzle": "^6.3 || ^7.0",
-        "j13k/yaml-lint": "^1.1",
-        "openeuropa/task-runner": "^2.0@alpha",
+        "j13k/yaml-lint": "dev-master",
         "php-parallel-lint/php-parallel-lint": "^1.3",
         "phpmd/phpmd": "^2.12",
         "phpunit/phpunit": "^7.5 || ^9.5",
@@ -41,6 +40,16 @@
             "EcEuropa\\Toolkit\\Tests\\": "./tests/"
         }
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/joaocsilva/task-runner"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/joaocsilva/robo-config"
+        }
+    ],
     "extra": {
         "enable-patching": true,
         "composer-exit-on-patch-failure": true
