@@ -16,8 +16,8 @@ pipeline:
   composer-install:
     group: composer
     image: registry.fpfis.eu/fpfis/httpd-php:${PHP_VERSION=7.4}-ci
-    volumes:
-      - /cache/${DRONE_REPO_NAME}:/cache
+#    volumes:
+#      - /cache/${DRONE_REPO_NAME}:/cache
     commands:
       - composer self-update --${COMPOSER_VERSION}
       - composer install --ansi --no-progress
@@ -28,8 +28,8 @@ pipeline:
   composer-update-lowest:
     group: composer
     image: registry.fpfis.eu/fpfis/httpd-php:${PHP_VERSION=7.4}-ci
-    volumes:
-      - /cache/${DRONE_REPO_NAME}:/cache
+#    volumes:
+#      - /cache/${DRONE_REPO_NAME}:/cache
     commands:
       - composer self-update --${COMPOSER_VERSION}
       - composer update --prefer-lowest --prefer-stable --ansi --no-progress
